@@ -1,0 +1,33 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "go-build-gui",
+      "type": "shell",
+      "command": "go build -o bin/server.exe ./cmd/server ; go build -o bin/client.exe ./cmd/client",
+      "group": "build",
+      "problemMatcher": ["$go"],
+      "isBackground": false
+    },
+    {
+      "label": "go-build-cli",
+      "type": "shell",
+      "command": "go build -o bin/cli-server.exe ./cmd/cli-server ; go build -o bin/cli-client.exe ./cmd/cli-client",
+      "group": "build",
+      "problemMatcher": ["$go"],
+      "isBackground": false
+    },
+    {
+      "label": "run-server-gui",
+      "type": "shell",
+      "command": ".\\bin\\server.exe",
+      "isBackground": true
+    },
+    {
+      "label": "run-client-gui",
+      "type": "shell",
+      "command": ".\\bin\\client.exe",
+      "isBackground": true
+    }
+  ]
+}
